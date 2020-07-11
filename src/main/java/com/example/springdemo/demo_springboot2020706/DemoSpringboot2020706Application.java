@@ -8,6 +8,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class DemoSpringboot2020706Application {
 
     public static void main(String[] args) {
+        //主类
         SpringApplication.run(DemoSpringboot2020706Application.class, args);
     }
 
