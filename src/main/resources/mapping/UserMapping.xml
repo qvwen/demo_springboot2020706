@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"
+        "http://ibatis.apache.org/dtd/ibatis-3-mapper.dtd">
+<mapper
+        namespace="com.example.springdemo.demo_springboot2020706.dao.UsertImp">
+    <resultMap id="UserPojo" type="com.example.springdemo.demo_springboot2020706.pojo.Uset">
+        <result property="acction" column="Acction"></result>
+        <result property="password" column="Password"></result>
+        <result property="name" column="Name"></result>
+        <result property="imagePath" column="Head_imge"></result>
+    </resultMap>
+    <select id="getLogin" resultMap="UserPojo">
+        select * from  uset where Acction = #{acction} and Password=#{password}
+    </select>
+    <select id="getUserALL" resultMap="UserPojo">
+          select * from  uset
+    </select>
+</mapper>
