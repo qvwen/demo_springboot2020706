@@ -9,7 +9,7 @@ import org.springframework.data.redis.serializer.RedisSerializer;
 import org.springframework.stereotype.Service;
 
 import java.util.concurrent.TimeUnit;
-
+//修改
 @Service
 public class RedisServiceImpl implements RedisService {
     @Autowired

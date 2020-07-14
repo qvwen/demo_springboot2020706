@@ -2,9 +2,11 @@ package com.example.springdemo.demo_springboot2020706;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
+@EnableCaching
 public class DemoSpringboot2020706Application {
 
     public static void main(String[] args) {

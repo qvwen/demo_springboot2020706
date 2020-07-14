@@ -23,7 +23,7 @@ public class UserBiz {
        return  dao.getLogin(acction,password);
     }
 
-     @Cacheable(key="#p0")//该注解用于向缓存中存入数据
+     @Cacheable(key="#id")//该注解用于向缓存中存入数据
     public PageInfo<Uset>  userALL(Integer id){
         PageHelper.startPage(1, 5);
         return new PageInfo<Uset>(dao.getUserALL());

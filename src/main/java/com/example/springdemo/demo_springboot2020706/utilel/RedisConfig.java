@@ -19,7 +19,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import java.time.Duration;
 
 
-@ConfigurationProperties
 @Configuration
 public class RedisConfig {
     private Duration timeToLive = Duration.ZERO;

@@ -19,12 +19,15 @@ import java.util.Map;
 public class UserController {
     @Resource
     UserBiz biz;
+
     @Resource
     private RedisService redisService;
+
     @GetMapping("/login")
     public Map<String,Object>   getLogin(HttpServletRequest request){
         System.out.println(getIpAddress(request));
          Map<String,Object>   resultMap  = new HashMap<>();
+
         String data =  JSON.toJSONString(biz.userALL(1));
         resultMap.put("code",200);
         resultMap.put("resutl",data);
