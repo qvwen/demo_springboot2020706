@@ -7,10 +7,12 @@ import com.example.springdemo.demo_springboot2020706.utilel.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import javax.websocket.server.PathParam;
 import java.net.InetAddress;
 import java.util.HashMap;
 import java.util.Map;
@@ -23,12 +25,12 @@ public class UserController {
     @Resource
     private RedisService redisService;
 
-    @GetMapping("/login")
-    public Map<String,Object>   getLogin(HttpServletRequest request){
+    @GetMapping("/login/{num}/{size}")
+    public Map<String,Object>   getLogin(HttpServletRequest request, @PathVariable("num") Integer num,@PathVariable("size") Integer size){
         System.out.println(getIpAddress(request));
          Map<String,Object>   resultMap  = new HashMap<>();
 
-        String data =  JSON.toJSONString(biz.userALL(1));
+        String data =  JSON.toJSONString(biz.userALL(1,num,size));
         resultMap.put("code",200);
         resultMap.put("resutl",data);
         return  resultMap;
