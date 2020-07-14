@@ -1,0 +1,15 @@
+Index: src/main/java/com/example/springdemo/demo_springboot2020706/utilel/RedisConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/java/com/example/springdemo/demo_springboot2020706/utilel/RedisConfig.java	(date 1594458542000)
++++ src/main/java/com/example/springdemo/demo_springboot2020706/utilel/RedisConfig.java	(date 1594627420572)
+@@ -19,7 +19,6 @@
+ import java.time.Duration;
+ 
+ 
+-@ConfigurationProperties
+ @Configuration
+ public class RedisConfig {
+     private Duration timeToLive = Duration.ZERO;

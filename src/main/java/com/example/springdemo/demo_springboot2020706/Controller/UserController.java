@@ -3,7 +3,6 @@ package com.example.springdemo.demo_springboot2020706.Controller;
 import com.alibaba.fastjson.JSON;
 import com.example.springdemo.demo_springboot2020706.biz.UserBiz;
 import com.example.springdemo.demo_springboot2020706.pojo.Uset;
-import com.example.springdemo.demo_springboot2020706.utilel.RedisService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +21,6 @@ public class UserController {
     @Resource
     UserBiz biz;
 
-    @Resource
-    private RedisService redisService;
 
     @GetMapping("/login/{num}/{size}")
     public Map<String,Object>   getLogin(HttpServletRequest request, @PathVariable("num") Integer num,@PathVariable("size") Integer size){
